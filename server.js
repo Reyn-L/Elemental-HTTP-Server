@@ -23,7 +23,7 @@ if(paths.includes(req.url)) {
       //checks if POST
     } else if (req.method === "POST") {
       //parse body
-      let queryUrl = querystring.parse('application/x-www-form-urlencoded');
+      let queryBody = querystring.parse('application/x-www-form-urlencoded');
       //writes files, creates new file if nonexistent
       fs.open('./public' + req.url, 'w', (err, fd) => {
         res.end();
